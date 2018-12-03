@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CA889A3C8D1D73FC75D1E3C /* Pods_PM25.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEBE139951F9C47ECD44CEA /* Pods_PM25.framework */; };
 		BB2582365056463E85928D7E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09EB63F3886439F96D357F5 /* libPods.a */; };
 		D20E94D0194C5E1200BDE77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D20E94CE194C5E1200BDE77A /* Assets.xcassets */; };
 		D20E94D1194C5E1200BDE77A /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E94CF194C5E1200BDE77A /* SCLAlertView.swift */; };
@@ -20,20 +21,10 @@
 		D2A73DC2194C4BC900FC1648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A73DC1194C4BC900FC1648 /* AppDelegate.swift */; };
 		D2A73DC4194C4BC900FC1648 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A73DC3194C4BC900FC1648 /* ViewController.swift */; };
 		D2A73DC9194C4BC900FC1648 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A73DC8194C4BC900FC1648 /* Images.xcassets */; };
-		D2A73DD5194C4BC900FC1648 /* PM25Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A73DD4194C4BC900FC1648 /* PM25Tests.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D2A73DCF194C4BC900FC1648 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D2A73DB4194C4BC900FC1648 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2A73DBB194C4BC900FC1648;
-			remoteInfo = PM25;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		8EEBE139951F9C47ECD44CEA /* Pods_PM25.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PM25.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA95DEBD666648969A82DB25 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D09EB63F3886439F96D357F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20E94CE194C5E1200BDE77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,9 +45,8 @@
 		D2A73DC1194C4BC900FC1648 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2A73DC3194C4BC900FC1648 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2A73DC8194C4BC900FC1648 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D2A73DCE194C4BC900FC1648 /* PM25Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PM25Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2A73DD3194C4BC900FC1648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2A73DD4194C4BC900FC1648 /* PM25Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PM25Tests.swift; sourceTree = "<group>"; };
+		E4E769803E36CBBA8F1B69E7 /* Pods-PM25.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PM25.release.xcconfig"; path = "Pods/Target Support Files/Pods-PM25/Pods-PM25.release.xcconfig"; sourceTree = "<group>"; };
+		EC0CD1E4D7FA2A36ED45A001 /* Pods-PM25.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PM25.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PM25/Pods-PM25.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,19 +57,22 @@
 				D2A49964194C511400D28651 /* QuartzCore.framework in Frameworks */,
 				D2A49962194C510B00D28651 /* libxml2.2.dylib in Frameworks */,
 				BB2582365056463E85928D7E /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D2A73DCB194C4BC900FC1648 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3CA889A3C8D1D73FC75D1E3C /* Pods_PM25.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		621C359F6813416E972B696D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC0CD1E4D7FA2A36ED45A001 /* Pods-PM25.debug.xcconfig */,
+				E4E769803E36CBBA8F1B69E7 /* Pods-PM25.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D20E94CD194C5DE000BDE77A /* SCLAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,10 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				D2A73DBE194C4BC900FC1648 /* PM25 */,
-				D2A73DD1194C4BC900FC1648 /* PM25Tests */,
 				D2A73DBD194C4BC900FC1648 /* Products */,
 				CA95DEBD666648969A82DB25 /* Pods.xcconfig */,
 				DE5916446FF940D1ABE0EC0A /* Frameworks */,
+				621C359F6813416E972B696D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				D2A73DBC194C4BC900FC1648 /* PM25.app */,
-				D2A73DCE194C4BC900FC1648 /* PM25Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,29 +146,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D2A73DD1194C4BC900FC1648 /* PM25Tests */ = {
-			isa = PBXGroup;
-			children = (
-				D2A73DD4194C4BC900FC1648 /* PM25Tests.swift */,
-				D2A73DD2194C4BC900FC1648 /* Supporting Files */,
-			);
-			path = PM25Tests;
-			sourceTree = "<group>";
-		};
-		D2A73DD2194C4BC900FC1648 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D2A73DD3194C4BC900FC1648 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		DE5916446FF940D1ABE0EC0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D2A49963194C511400D28651 /* QuartzCore.framework */,
 				D2A49961194C510B00D28651 /* libxml2.2.dylib */,
 				D09EB63F3886439F96D357F5 /* libPods.a */,
+				8EEBE139951F9C47ECD44CEA /* Pods_PM25.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,11 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2A73DD8194C4BC900FC1648 /* Build configuration list for PBXNativeTarget "PM25" */;
 			buildPhases = (
+				DFC0CC4491BFFD53F20A9E15 /* [CP] Check Pods Manifest.lock */,
 				7550585D92744B0A933683A5 /* Check Pods Manifest.lock */,
 				D2A73DB8194C4BC900FC1648 /* Sources */,
 				D2A73DB9194C4BC900FC1648 /* Frameworks */,
 				D2A73DBA194C4BC900FC1648 /* Resources */,
-				609AA449366E45EB8DF31D3A /* Copy Pods Resources */,
+				9B87937DD6060A54F7487C13 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,24 +179,6 @@
 			productName = PM25;
 			productReference = D2A73DBC194C4BC900FC1648 /* PM25.app */;
 			productType = "com.apple.product-type.application";
-		};
-		D2A73DCD194C4BC900FC1648 /* PM25Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D2A73DDB194C4BC900FC1648 /* Build configuration list for PBXNativeTarget "PM25Tests" */;
-			buildPhases = (
-				D2A73DCA194C4BC900FC1648 /* Sources */,
-				D2A73DCB194C4BC900FC1648 /* Frameworks */,
-				D2A73DCC194C4BC900FC1648 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D2A73DD0194C4BC900FC1648 /* PBXTargetDependency */,
-			);
-			name = PM25Tests;
-			productName = PM25Tests;
-			productReference = D2A73DCE194C4BC900FC1648 /* PM25Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -232,10 +191,6 @@
 				TargetAttributes = {
 					D2A73DBB194C4BC900FC1648 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					D2A73DCD194C4BC900FC1648 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = D2A73DBB194C4BC900FC1648;
 					};
 				};
 			};
@@ -253,7 +208,6 @@
 			projectRoot = "";
 			targets = (
 				D2A73DBB194C4BC900FC1648 /* PM25 */,
-				D2A73DCD194C4BC900FC1648 /* PM25Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,31 +223,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2A73DCC194C4BC900FC1648 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		609AA449366E45EB8DF31D3A /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7550585D92744B0A933683A5 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -307,6 +239,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B87937DD6060A54F7487C13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PM25/Pods-PM25-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PM25/Pods-PM25-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC0CC4491BFFD53F20A9E15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PM25-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -326,23 +294,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2A73DCA194C4BC900FC1648 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D2A73DD5194C4BC900FC1648 /* PM25Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D2A73DD0194C4BC900FC1648 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2A73DBB194C4BC900FC1648 /* PM25 */;
-			targetProxy = D2A73DCF194C4BC900FC1648 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D2541BC8194D878D00E5E71B /* Main.storyboard */ = {
@@ -435,7 +387,7 @@
 		};
 		D2A73DD9194C4BC900FC1648 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA95DEBD666648969A82DB25 /* Pods.xcconfig */;
+			baseConfigurationReference = EC0CD1E4D7FA2A36ED45A001 /* Pods-PM25.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -452,12 +404,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PM25/PM25-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		D2A73DDA194C4BC900FC1648 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA95DEBD666648969A82DB25 /* Pods.xcconfig */;
+			baseConfigurationReference = E4E769803E36CBBA8F1B69E7 /* Pods-PM25.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -473,42 +426,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PM25/PM25-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		D2A73DDC194C4BC900FC1648 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PM25.app/PM25";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PM25Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		D2A73DDD194C4BC900FC1648 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PM25.app/PM25";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PM25Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -529,15 +447,6 @@
 			buildConfigurations = (
 				D2A73DD9194C4BC900FC1648 /* Debug */,
 				D2A73DDA194C4BC900FC1648 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D2A73DDB194C4BC900FC1648 /* Build configuration list for PBXNativeTarget "PM25Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D2A73DDC194C4BC900FC1648 /* Debug */,
-				D2A73DDD194C4BC900FC1648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

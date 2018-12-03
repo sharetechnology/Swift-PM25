@@ -155,7 +155,7 @@ class SCLAlertView : UIView {
     }
     
     // showInfo(view, title, subTitle)
-    func showInfo(view: UIViewController, title: String, subTitle: String) -> SCLAlertViewResponder {
+    func showInfo(_ view: UIViewController, title: String, subTitle: String) -> SCLAlertViewResponder {
         return showTitle(view, title: title, subTitle: subTitle, duration: 2.0, completeText: nil, style: SCLAlertViewStyle.Info);
     }
     

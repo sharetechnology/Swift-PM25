@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CA889A3C8D1D73FC75D1E3C /* Pods_PM25.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEBE139951F9C47ECD44CEA /* Pods_PM25.framework */; };
+		1146E6671A85E2741FA15356 /* Pods_PM25.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4EA5707445E27D103155E88 /* Pods_PM25.framework */; };
 		670B2F3621B4B8B40057DCC6 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670B2F3521B4B8B40057DCC6 /* SCLExtensions.swift */; };
-		BB2582365056463E85928D7E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D09EB63F3886439F96D357F5 /* libPods.a */; };
+		670B2F3D21B4C69E0057DCC6 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 670B2F3921B4C69D0057DCC6 /* TFHppleElement.m */; };
+		670B2F3E21B4C69E0057DCC6 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 670B2F3A21B4C69D0057DCC6 /* XPathQuery.m */; };
+		670B2F3F21B4C69E0057DCC6 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 670B2F3B21B4C69E0057DCC6 /* TFHpple.m */; };
+		670B2F4121B4C7500057DCC6 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 670B2F4021B4C74F0057DCC6 /* libxml2.2.tbd */; };
 		D20E94D0194C5E1200BDE77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D20E94CE194C5E1200BDE77A /* Assets.xcassets */; };
 		D20E94D1194C5E1200BDE77A /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20E94CF194C5E1200BDE77A /* SCLAlertView.swift */; };
 		D2541BCA194D878D00E5E71B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2541BC8194D878D00E5E71B /* Main.storyboard */; };
 		D28F5C0A194C572700530487 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F5C09194C572700530487 /* DetailsViewController.swift */; };
-		D2A4995B194C50B500D28651 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A49958194C50B500D28651 /* TFHpple.m */; };
-		D2A4995C194C50B500D28651 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A4995A194C50B500D28651 /* TFHppleElement.m */; };
-		D2A49960194C50CF00D28651 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A4995E194C50CF00D28651 /* XPathQuery.m */; };
-		D2A49962194C510B00D28651 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A49961194C510B00D28651 /* libxml2.2.dylib */; };
 		D2A49964194C511400D28651 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A49963194C511400D28651 /* QuartzCore.framework */; };
 		D2A73DC2194C4BC900FC1648 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A73DC1194C4BC900FC1648 /* AppDelegate.swift */; };
 		D2A73DC4194C4BC900FC1648 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A73DC3194C4BC900FC1648 /* ViewController.swift */; };
@@ -26,21 +25,18 @@
 
 /* Begin PBXFileReference section */
 		670B2F3521B4B8B40057DCC6 /* SCLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
-		8EEBE139951F9C47ECD44CEA /* Pods_PM25.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PM25.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA95DEBD666648969A82DB25 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		D09EB63F3886439F96D357F5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		670B2F3721B4C69D0057DCC6 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		670B2F3821B4C69D0057DCC6 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		670B2F3921B4C69D0057DCC6 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		670B2F3A21B4C69D0057DCC6 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		670B2F3B21B4C69E0057DCC6 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		670B2F3C21B4C69E0057DCC6 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		670B2F4021B4C74F0057DCC6 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		D20E94CE194C5E1200BDE77A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D20E94CF194C5E1200BDE77A /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		D2541BC9194D878D00E5E71B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D28F5C09194C572700530487 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		D2A49956194C50B500D28651 /* PM25-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PM25-Bridging-Header.h"; sourceTree = "<group>"; };
-		D2A49957194C50B500D28651 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
-		D2A49958194C50B500D28651 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
-		D2A49959194C50B500D28651 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
-		D2A4995A194C50B500D28651 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
-		D2A4995E194C50CF00D28651 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
-		D2A4995F194C50CF00D28651 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
-		D2A49961194C510B00D28651 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		D2A49963194C511400D28651 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D2A73DBC194C4BC900FC1648 /* PM25.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PM25.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A73DC0194C4BC900FC1648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +44,7 @@
 		D2A73DC3194C4BC900FC1648 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2A73DC8194C4BC900FC1648 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E4E769803E36CBBA8F1B69E7 /* Pods-PM25.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PM25.release.xcconfig"; path = "Pods/Target Support Files/Pods-PM25/Pods-PM25.release.xcconfig"; sourceTree = "<group>"; };
+		E4EA5707445E27D103155E88 /* Pods_PM25.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PM25.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0CD1E4D7FA2A36ED45A001 /* Pods-PM25.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PM25.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PM25/Pods-PM25.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,10 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670B2F4121B4C7500057DCC6 /* libxml2.2.tbd in Frameworks */,
 				D2A49964194C511400D28651 /* QuartzCore.framework in Frameworks */,
-				D2A49962194C510B00D28651 /* libxml2.2.dylib in Frameworks */,
-				BB2582365056463E85928D7E /* libPods.a in Frameworks */,
-				3CA889A3C8D1D73FC75D1E3C /* Pods_PM25.framework in Frameworks */,
+				1146E6671A85E2741FA15356 /* Pods_PM25.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,33 +81,11 @@
 			name = SCLAlertView;
 			sourceTree = "<group>";
 		};
-		D2A49955194C509000D28651 /* Hpple */ = {
-			isa = PBXGroup;
-			children = (
-				D2A4995D194C50C400D28651 /* XPath */,
-				D2A49957194C50B500D28651 /* TFHpple.h */,
-				D2A49958194C50B500D28651 /* TFHpple.m */,
-				D2A49959194C50B500D28651 /* TFHppleElement.h */,
-				D2A4995A194C50B500D28651 /* TFHppleElement.m */,
-			);
-			name = Hpple;
-			sourceTree = "<group>";
-		};
-		D2A4995D194C50C400D28651 /* XPath */ = {
-			isa = PBXGroup;
-			children = (
-				D2A4995E194C50CF00D28651 /* XPathQuery.m */,
-				D2A4995F194C50CF00D28651 /* XPathQuery.h */,
-			);
-			name = XPath;
-			sourceTree = "<group>";
-		};
 		D2A73DB3194C4BC900FC1648 = {
 			isa = PBXGroup;
 			children = (
 				D2A73DBE194C4BC900FC1648 /* PM25 */,
 				D2A73DBD194C4BC900FC1648 /* Products */,
-				CA95DEBD666648969A82DB25 /* Pods.xcconfig */,
 				DE5916446FF940D1ABE0EC0A /* Frameworks */,
 				621C359F6813416E972B696D /* Pods */,
 			);
@@ -132,8 +106,13 @@
 				D2A73DC3194C4BC900FC1648 /* ViewController.swift */,
 				D28F5C09194C572700530487 /* DetailsViewController.swift */,
 				D2A49956194C50B500D28651 /* PM25-Bridging-Header.h */,
+				670B2F3721B4C69D0057DCC6 /* TFHpple.h */,
+				670B2F3B21B4C69E0057DCC6 /* TFHpple.m */,
+				670B2F3C21B4C69E0057DCC6 /* TFHppleElement.h */,
+				670B2F3921B4C69D0057DCC6 /* TFHppleElement.m */,
+				670B2F3821B4C69D0057DCC6 /* XPathQuery.h */,
+				670B2F3A21B4C69D0057DCC6 /* XPathQuery.m */,
 				D2541BC8194D878D00E5E71B /* Main.storyboard */,
-				D2A49955194C509000D28651 /* Hpple */,
 				D20E94CD194C5DE000BDE77A /* SCLAlertView */,
 				D2A73DBF194C4BC900FC1648 /* Supporting Files */,
 			);
@@ -152,10 +131,9 @@
 		DE5916446FF940D1ABE0EC0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				670B2F4021B4C74F0057DCC6 /* libxml2.2.tbd */,
 				D2A49963194C511400D28651 /* QuartzCore.framework */,
-				D2A49961194C510B00D28651 /* libxml2.2.dylib */,
-				D09EB63F3886439F96D357F5 /* libPods.a */,
-				8EEBE139951F9C47ECD44CEA /* Pods_PM25.framework */,
+				E4EA5707445E27D103155E88 /* Pods_PM25.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,12 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2A73DD8194C4BC900FC1648 /* Build configuration list for PBXNativeTarget "PM25" */;
 			buildPhases = (
-				DFC0CC4491BFFD53F20A9E15 /* [CP] Check Pods Manifest.lock */,
-				7550585D92744B0A933683A5 /* Check Pods Manifest.lock */,
+				7C5ADC45CF3C1593DA227E04 /* [CP] Check Pods Manifest.lock */,
 				D2A73DB8194C4BC900FC1648 /* Sources */,
 				D2A73DB9194C4BC900FC1648 /* Frameworks */,
 				D2A73DBA194C4BC900FC1648 /* Resources */,
-				9B87937DD6060A54F7487C13 /* [CP] Embed Pods Frameworks */,
+				FA73C014AA7E11242B570E8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +171,7 @@
 				TargetAttributes = {
 					D2A73DBB194C4BC900FC1648 = {
 						CreatedOnToolsVersion = 6.0;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -229,55 +207,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7550585D92744B0A933683A5 /* Check Pods Manifest.lock */ = {
+		7C5ADC45CF3C1593DA227E04 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9B87937DD6060A54F7487C13 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PM25/Pods-PM25-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PM25/Pods-PM25-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DFC0CC4491BFFD53F20A9E15 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PM25-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA73C014AA7E11242B570E8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PM25/Pods-PM25-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PM25/Pods-PM25-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -287,14 +258,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				670B2F3D21B4C69E0057DCC6 /* TFHppleElement.m in Sources */,
+				670B2F3E21B4C69E0057DCC6 /* XPathQuery.m in Sources */,
 				670B2F3621B4B8B40057DCC6 /* SCLExtensions.swift in Sources */,
-				D2A4995C194C50B500D28651 /* TFHppleElement.m in Sources */,
 				D2A73DC4194C4BC900FC1648 /* ViewController.swift in Sources */,
-				D2A49960194C50CF00D28651 /* XPathQuery.m in Sources */,
-				D2A4995B194C50B500D28651 /* TFHpple.m in Sources */,
 				D28F5C0A194C572700530487 /* DetailsViewController.swift in Sources */,
 				D20E94D1194C5E1200BDE77A /* SCLAlertView.swift in Sources */,
 				D2A73DC2194C4BC900FC1648 /* AppDelegate.swift in Sources */,
+				670B2F3F21B4C69E0057DCC6 /* TFHpple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,15 +368,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
 					"\"${PODS_ROOT}/Headers\"",
 					"\"${PODS_ROOT}/Headers/SVProgressHUD\"",
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = PM25/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PM25/PM25-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -420,15 +394,18 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
 					"\"${PODS_ROOT}/Headers\"",
 					"\"${PODS_ROOT}/Headers/SVProgressHUD\"",
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = PM25/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "PM25/PM25-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};

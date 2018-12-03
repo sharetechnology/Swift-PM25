@@ -54,7 +54,7 @@ class ViewController: UITableViewController {
     //导航栏关于按钮
     @IBAction func about(sender : AnyObject) {
 
-        SCLAlertView().showInfo("关于", subTitle: "该应用数据来源于pm25.in。仅供学习交流,请勿用于商业用途!\nQQ:184675420", closeButtonTitle: nil, timeout: 0, colorStyle: 0, colorTextButton: 0, circleIconImage: 0, animationStyle: 0)
+        SCLAlertView().showInfo("关于", subTitle: "该应用数据来源于pm25.in。仅供学习交流,请勿用于商业用途!\nQQ:184675420")
 
 //        SCLAlertView().showInfo(self,title: "关于", subTitle: "该应用数据来源于pm25.in。仅供学习交流,请勿用于商业用途!\nQQ:184675420")
     }
@@ -130,7 +130,7 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                 let reuseIdentifier = "Cell"
 
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as!  UITableViewCell
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as!  UITableViewCell
 
         //        if cell == nil {
         //            cell = UITableViewCell(style:.Default,reuseIdentifier:reuseIdentifier)

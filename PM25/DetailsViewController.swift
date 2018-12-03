@@ -311,11 +311,11 @@ class DetailsViewController: UIViewController {
     
     func getData(){
         
-        var url: URL = URL(string: self.url!)!
+        let url: URL = URL(string: self.url!)!
         let request: URLRequest = URLRequest.init(url: url)
 //        let request: NSURLRequest = NSURLRequest(url: url)
 
-        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.mainQueue(), completionHandler:{
+        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main, completionHandler:{
             
             (response, data, error) -> Void in
             
@@ -323,8 +323,8 @@ class DetailsViewController: UIViewController {
               
                 let alertView:UIAlertView = UIAlertView()
                 alertView.title="提示"
-                alertView.message="\(error.localizedDescription)"
-                alertView.addButtonWithTitle("确定")
+                alertView.message="\(error!.localizedDescription)"
+                alertView.addButton(withTitle: "确定")
                 alertView.show()
                 
             }else{
@@ -332,7 +332,7 @@ class DetailsViewController: UIViewController {
                 //用于将NSData转化为NSString
                 //let str:String = NSString(data: data, encoding: NSUTF8StringEncoding) as String
                 
-                self.parseData(data)
+                self.parseData(data: data! as NSData)
 
                 SVProgressHUD.dismiss()
                 
@@ -345,40 +345,46 @@ class DetailsViewController: UIViewController {
     
     func parseData(data:NSData){
 
-        var doc:TFHpple = TFHpple.hppleWithHTMLData(data,encoding:"UTF8")
+        var doc:TFHpple = TFHpple.init(htmlData: data as Data)
+//        var doc:TFHpple = TFHpple.hppleWithHTMLData(data,encoding:"UTF8")
 
 
-        var city:TFHppleElement = doc.peekAtSearchWithXPathQuery("//div[@class='city_name']/h2")
+        var city:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='city_name']/h2")
         
         self.lblCity.text = self.city
         
-        self.lblCity.text = city.firstChild.content?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+//        self.lblCity.text = city.firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+
+        self.lblCity.text = city.firstChild.content
         
-        var level:TFHppleElement = doc.peekAtSearchWithXPathQuery("//div[@class='level']/h4")
+        var level:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='level']/h4")
         
-        self.lblLevel.text = level.firstChild.content?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+//        self.lblLevel.text = level.firstChild.content?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        self.lblLevel.text = level.firstChild.content
+        var uptime:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='live_data_time']/p")
         
-        var uptime:TFHppleElement = doc.peekAtSearchWithXPathQuery("//div[@class='live_data_time']/p")
+//        self.lblUptime.text = uptime.firstChild.content?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        self.lblUptime.text = uptime.firstChild.content
+        var unit:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='live_data_unit']")
+//        self.lblUnit.text = unit.firstChild.content?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        self.lblUnit.text = unit.firstChild.content
+        var caption:[String] = doc.search(withXPathQuery: "//div[@class='span1']/div[@class='caption']")! as! [String]
         
-        self.lblUptime.text = uptime.firstChild.content?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        
-        var unit:TFHppleElement = doc.peekAtSearchWithXPathQuery("//div[@class='live_data_unit']")
-        self.lblUnit.text = unit.firstChild.content?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        
-        var caption:NSArray = doc.searchWithXPathQuery("//div[@class='span1']/div[@class='caption']")
-        
-        var value:NSArray = doc.searchWithXPathQuery("//div[@class='span1']/div[@class='value']")
+        var value:[String] = doc.search(withXPathQuery: "//div[@class='span1']/div[@class='value']")! as! [String]
         
         var captionStr:[String] = []
         
         var val:[String] = []
         
-        for c:AnyObject in caption {
-            captionStr.append((c as TFHppleElement).firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
+        for c:String in caption {
+//            captionStr.append((c as TFHppleElement).firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
+
+            captionStr.append(c)
         }
         
-        for v:AnyObject in value {
-            val.append((v as TFHppleElement).firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
+        for v:String in value {
+//            val.append((v as TFHppleElement).firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
+            val.append(v)
         }
         
         
@@ -392,15 +398,18 @@ class DetailsViewController: UIViewController {
         self.lblO38.text = val[6] + "\n" + captionStr[6]
         self.lblSo2.text = val[7] + "\n" + captionStr[7]
         
-        var pollutant:String = doc.peekAtSearchWithXPathQuery("//div[@class='primary_pollutant']/p").firstChild.content.stringByReplacingOccurrencesOfString("\n",withString:"").stringByReplacingOccurrencesOfString(" ",withString:"")
-        
+//        var pollutant:String = doc.peekAtSearchWithXPathQuery("//div[@class='primary_pollutant']/p").firstChild.content.stringByReplacingOccurrencesOfString("\n",withString:"").stringByReplacingOccurrencesOfString(" ",withString:"")
+
+
+        let pollutant:String = doc.peekAtSearch(withXPathQuery: "//div[@class='primary_pollutant']/p").firstChild.content.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: " ", with: "")
+
         self.lblPollutant.text = pollutant
         
-        var affect:String = doc.peekAtSearchWithXPathQuery("//div[@class='affect']/p").firstChild.content.stringByReplacingOccurrencesOfString("\n",withString:"").stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).stringByReplacingOccurrencesOfString(" ",withString:"")
+        let affect:String = doc.peekAtSearch(withXPathQuery: "//div[@class='affect']/p").firstChild.content.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: " ", with: "")
         
         self.lblAffect.text = affect
         
-        var action:String = doc.peekAtSearchWithXPathQuery("//div[@class='action']/p").firstChild.content.stringByReplacingOccurrencesOfString("\n",withString:"").stringByReplacingOccurrencesOfString(" ",withString:"")
+        let action:String = doc.peekAtSearch(withXPathQuery: "//div[@class='action']/p").firstChild.content.replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: " ", with: "")
         
         self.lblAction.text = action
         

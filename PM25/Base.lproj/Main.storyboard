@@ -259,7 +259,7 @@
                         <barButtonItem key="backBarButtonItem" title="返回" id="8Kf-VZ-Bol"/>
                         <barButtonItem key="leftBarButtonItem" title="关于" style="done" id="IAU-9y-33c">
                             <connections>
-                                <action selector="about:" destination="dZ3-Do-9kc" id="XWK-Rk-x5j"/>
+                                <action selector="about:" destination="dZ3-Do-9kc" id="0ug-K7-RAp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

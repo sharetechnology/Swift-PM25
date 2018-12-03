@@ -345,11 +345,12 @@ class DetailsViewController: UIViewController {
     
     func parseData(data:NSData){
 
-        var doc:TFHpple = TFHpple.init(htmlData: data as Data)
+        let doc:TFHpple = TFHpple.init(htmlData: data as Data)
+        print(doc)
 //        var doc:TFHpple = TFHpple.hppleWithHTMLData(data,encoding:"UTF8")
 
 
-        var city:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='city_name']/h2")
+        let city:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='city_name']/h2")
         
         self.lblCity.text = self.city
         
@@ -357,34 +358,36 @@ class DetailsViewController: UIViewController {
 
         self.lblCity.text = city.firstChild.content
         
-        var level:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='level']/h4")
+        let level:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='level']/h4")
         
 //        self.lblLevel.text = level.firstChild.content?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         self.lblLevel.text = level.firstChild.content
-        var uptime:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='live_data_time']/p")
+        let uptime:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='live_data_time']/p")
         
 //        self.lblUptime.text = uptime.firstChild.content?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         self.lblUptime.text = uptime.firstChild.content
-        var unit:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='live_data_unit']")
+        let unit:TFHppleElement = doc.peekAtSearch(withXPathQuery: "//div[@class='live_data_unit']")
 //        self.lblUnit.text = unit.firstChild.content?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         self.lblUnit.text = unit.firstChild.content
-        var caption:[String] = doc.search(withXPathQuery: "//div[@class='span1']/div[@class='caption']")! as! [String]
-        
-        var value:[String] = doc.search(withXPathQuery: "//div[@class='span1']/div[@class='value']")! as! [String]
+        let caption:[TFHppleElement] = doc.search(withXPathQuery: "//div[@class='span1']/div[@class='caption']")! as! [TFHppleElement]
+
+        let value:[TFHppleElement] = doc.search(withXPathQuery: "//div[@class='span1']/div[@class='value']")! as! [TFHppleElement]
         
         var captionStr:[String] = []
         
         var val:[String] = []
         
-        for c:String in caption {
+        for c in caption {
+
+//           c.firstChild.content
 //            captionStr.append((c as TFHppleElement).firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
 
-            captionStr.append(c)
+            captionStr.append(c.firstChild.content)
         }
         
-        for v:String in value {
+        for v in value {
 //            val.append((v as TFHppleElement).firstChild.content.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))
-            val.append(v)
+            val.append(v.firstChild.content)
         }
         
         

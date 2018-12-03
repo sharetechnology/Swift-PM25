@@ -51,8 +51,7 @@ class ViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    //导航栏关于按钮
-    @IBAction func about(sender : AnyObject) {
+    @IBAction func about(_ sender: UIBarButtonItem) {
 
         SCLAlertView().showInfo("关于", subTitle: "该应用数据来源于pm25.in。仅供学习交流,请勿用于商业用途!\nQQ:184675420")
 

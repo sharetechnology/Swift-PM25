@@ -276,46 +276,46 @@ class DetailsViewController: UIViewController {
         
         imageView1.layer.masksToBounds = true
         imageView1.layer.cornerRadius = 30;
-        imageView1.hidden = false
+        imageView1.isHidden = false
         
         imageView2.layer.masksToBounds = true
         imageView2.layer.cornerRadius = 30;
-        imageView2.hidden = false
+        imageView2.isHidden = false
         
         imageView3.layer.masksToBounds = true
         imageView3.layer.cornerRadius = 30;
-        imageView3.hidden = false
+        imageView3.isHidden = false
         
         imageView4.layer.masksToBounds = true
         imageView4.layer.cornerRadius = 30;
-        imageView4.hidden = false
+        imageView4.isHidden = false
         
         imageView5.layer.masksToBounds = true
         imageView5.layer.cornerRadius = 30;
-        imageView5.hidden = false
+        imageView5.isHidden = false
         
         imageView6.layer.masksToBounds = true
         imageView6.layer.cornerRadius = 30;
-        imageView6.hidden = false
+        imageView6.isHidden = false
         
         imageView7.layer.masksToBounds = true
         imageView7.layer.cornerRadius = 30;
-        imageView7.hidden = false
+        imageView7.isHidden = false
         
         imageView8.layer.masksToBounds = true
         imageView8.layer.cornerRadius = 30;
-        imageView8.hidden = false
+        imageView8.isHidden = false
         
     }
     
     
     func getData(){
         
-        var url: NSURL = NSURL(string: self.url!)
-        
-        let request: NSURLRequest = NSURLRequest(URL: url)
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{
+        var url: URL = URL(string: self.url!)!
+        let request: URLRequest = URLRequest.init(url: url)
+//        let request: NSURLRequest = NSURLRequest(url: url)
+
+        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.mainQueue(), completionHandler:{
             
             (response, data, error) -> Void in
             
@@ -344,9 +344,10 @@ class DetailsViewController: UIViewController {
     
     
     func parseData(data:NSData){
-        
+
         var doc:TFHpple = TFHpple.hppleWithHTMLData(data,encoding:"UTF8")
-        
+
+
         var city:TFHppleElement = doc.peekAtSearchWithXPathQuery("//div[@class='city_name']/h2")
         
         self.lblCity.text = self.city

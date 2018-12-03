@@ -53,54 +53,92 @@ class ViewController: UITableViewController {
     
     //导航栏关于按钮
     @IBAction func about(sender : AnyObject) {
-        SCLAlertView().showInfo(self,title: "关于", subTitle: "该应用数据来源于pm25.in。仅供学习交流,请勿用于商业用途!\nQQ:184675420")
+
+        SCLAlertView().showInfo("关于", subTitle: "该应用数据来源于pm25.in。仅供学习交流,请勿用于商业用途!\nQQ:184675420", closeButtonTitle: nil, timeout: 0, colorStyle: 0, colorTextButton: 0, circleIconImage: 0, animationStyle: 0)
+
+//        SCLAlertView().showInfo(self,title: "关于", subTitle: "该应用数据来源于pm25.in。仅供学习交流,请勿用于商业用途!\nQQ:184675420")
     }
     
     
     // #pragma mark - UITableViewDataSource
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//
+//        return indexSet.count
+//
+//    }
+
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return indexSet.count
-        
     }
-    
+
+
     // #pragma mark - UITableViewDataSource
-    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [AnyObject]!{
-        
+//    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [AnyObject]!{
+//
+//        return indexSet
+//
+//    }
+
+
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return indexSet
-        
     }
     
-    
     // #pragma mark - UITableViewDataSource
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+//
+//        return dataSet[section].count
+//
+//    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSet[section].count
-        
     }
-    
+
+
     // #pragma mark - UITableViewDataSource
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String{
-        
+//    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String{
+//
+//        return indexSet[section]
+//
+//    }
+
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return indexSet[section]
-        
     }
     
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        
-        let reuseIdentifier = "Cell"
-        
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as  UITableViewCell
-        
-//        if cell == nil {
-//            cell = UITableViewCell(style:.Default,reuseIdentifier:reuseIdentifier)
-//        }
-        
-        cell.textLabel!.text = dataSet[indexPath.section][indexPath.row]
-        
-        return cell
-        
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+//
+//        let reuseIdentifier = "Cell"
+//
+//        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as  UITableViewCell
+//
+////        if cell == nil {
+////            cell = UITableViewCell(style:.Default,reuseIdentifier:reuseIdentifier)
+////        }
+//
+//        cell.textLabel!.text = dataSet[indexPath.section][indexPath.row]
+//
+//        return cell
+//
+//    }
+
+
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                let reuseIdentifier = "Cell"
+
+        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as!  UITableViewCell
+
+        //        if cell == nil {
+        //            cell = UITableViewCell(style:.Default,reuseIdentifier:reuseIdentifier)
+        //        }
+
+                cell.textLabel!.text = dataSet[indexPath.section][indexPath.row]
+
+                return cell
     }
     
     // #pragma mark - UITableViewDelegate
@@ -115,19 +153,30 @@ class ViewController: UITableViewController {
 //        self.navigationController.pushViewController(detailsViewController, animated: true)
 //        
 //    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
-        
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Detail" {
-            if segue.destinationViewController is DetailsViewController {
-                var detailsViewController:DetailsViewController = segue.destinationViewController as DetailsViewController
-                var index = self.tableView.indexPathForSelectedRow()
+            if segue.destination is DetailsViewController {
+                var detailsViewController:DetailsViewController = segue.destination as! DetailsViewController
+                var index = self.tableView.indexPathForSelectedRow
                 detailsViewController.city = dataSet[index!.section][index!.row] as String
             }
         }
-        
     }
-    
+
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
+//
+//        if segue.identifier == "Detail" {
+//            if segue.destinationViewController is DetailsViewController {
+//                var detailsViewController:DetailsViewController = segue.destinationViewController as DetailsViewController
+//                var index = self.tableView.indexPathForSelectedRow()
+//                detailsViewController.city = dataSet[index!.section][index!.row] as String
+//            }
+//        }
+//
+//    }
+
     
 }
 
